@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color flipper</title>
+</head>
+<body>
+    <div class="heading">background color    :<span id="cname"> - </span></div>
+
+    <button onclick="getColor()">
+        click me
+    </button>
+    <script>
+
+function getColor(){
+
+    var color = Math.floor(Math.random()*16777215).toString(16)
+
+    console.log(color)
+    document.body.style.backgroundColor = '#'+ color
+
+    document.getElementById('cname').innerHTML = "#"+color
+}
+    </script>
+    <style>
+        .heading{
+            font-size: 36px;
+            font-weight: 600;
+            background-color: rgb(40, 40, 40);
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        h1{
+            text-align: center;
+            
+        }
+        h1{
+
+            color: black;
+        }
+        button{
+            text-align: center;
+            
+        }
+        body{
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</body>
+</html>
